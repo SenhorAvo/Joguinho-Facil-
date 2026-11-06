@@ -1,1 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background: #080808;
+    color: #e5e5e5;
+    font-family: 'Courier New', monospace;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu {
+    width: 100%;
+    max-width: 750px;
+    min-height: 450px;
+    padding: 50px 30px;
+    text-align: center;
+    background: #101010;
+    border: 1px solid #292929;
+    box-shadow: 0 0 35px #000;
+}
+
+h1 {
+    font-size: 55px;
+    letter-spacing: 10px;
+    color: #b51212;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #777;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 55px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #b51212;
+    letter-spacing: 3px;
+}
+
+button {
+    display: block;
+    width: 250px;
+    max-width: 100%;
+    margin: 15px auto;
+    padding: 15px;
+    background: transparent;
+    color: #ddd;
+    border: 1px solid #555;
+    font-family: inherit;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #8b1010;
+    border-color: #8b1010;
+    color: white;
+    transform: scale(1.04);
+}
+
+#description {
+    color: #bbb;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 25px auto;
+    max-width: 600px;
+    white-space: pre-line;
+}
+
+#choices {
+    margin-top: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 38px;
+        letter-spacing: 5px;
+    }
+
+    .menu {
+        padding: 35px 18px;
+    }
+}
