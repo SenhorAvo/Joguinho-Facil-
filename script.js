@@ -22,15 +22,37 @@ function backHome() {
 }
 
 function startGame(difficulty) {
-    const nomes = {
-        facil: "FÁCIL",
-        medio: "MÉDIO",
-        dificil: "DIFÍCIL",
-        impossivel: "IMPOSSÍVEL"
-    };
+    if (difficulty !== "facil") {
+        alert("O modo " + difficulty.toUpperCase() + " está em desenvolvimento!");
+        return;
+    }
 
-    alert(
-        "O modo " + nomes[difficulty] +
-        " está em desenvolvimento!\n\nEm breve teremos novidades."
-    );
+    hideAll();
+    document.getElementById("story").classList.remove("hidden");
+
+    document.getElementById("chapter").textContent = "ANTES DE COMEÇAR";
+    document.getElementById("description").textContent =
+        "Toda história começa com um nome.\n\nQual é o seu nome?";
+
+    document.getElementById("choices").innerHTML = `
+        <input type="text" id="playerName" placeholder="Digite seu nome..." maxlength="20">
+        <button onclick="confirmName()">CONFIRMAR</button>
+    `;
 }
+
+function confirmName() {
+    const input = document.getElementById("playerName");
+    const name = input.value.trim();
+
+    if (name.length < 2) {
+        alert("Digite um nome válido!");
+        return;
+    }
+
+    playerName = name;
+    currentDialogue = 0;
+    nextDialogue();
+}
+
+let playerName = "";
+let currentDialogue = 0;
