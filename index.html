@@ -1,1 +1,48 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAST WORDS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="menu">
+        <h1>LAST WORDS</h1>
+        <p class="subtitle">EVERY CHOICE HAS A CONSEQUENCE.</p>
+
+        <div id="home">
+            <button onclick="showDifficulties()">JOGAR</button>
+            <button onclick="credits()">CRÉDITOS</button>
+        </div>
+
+        <div id="difficulties" class="hidden">
+            <h2>ESCOLHA A DIFICULDADE</h2>
+
+            <button onclick="startGame('facil')">FÁCIL</button>
+            <button onclick="startGame('medio')">MÉDIO</button>
+            <button onclick="startGame('dificil')">DIFÍCIL</button>
+            <button onclick="startGame('impossivel')">IMPOSSÍVEL</button>
+        </div>
+
+        <div id="story" class="hidden">
+            <h2 id="chapter"></h2>
+            <p id="description"></p>
+            <div id="choices"></div>
+        </div>
+
+        <div id="credits" class="hidden">
+            <h2>CRÉDITOS</h2>
+            <p>Desenvolvido por Thierry.</p>
+            <button onclick="backHome()">VOLTAR</button>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
